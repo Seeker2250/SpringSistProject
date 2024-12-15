@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="hasShownOverlayPopupBefore" value="true"/>
+	<item key="replaceBarOpen" value="false"/>
+	<list key="searchhistory">
+		<item value="Edu"/>
+		<item value="&lt;form"/>
+		<item value="확인"/>
+		<item value="처리"/>
+		<item value="처리중"/>
+		<item value="요청 처리중"/>
+		<item value="&lt;script"/>
+		<item value="script"/>
+		<item value="글쓰기"/>
+		<item value="페이징"/>
+		<item value="페이지"/>
+		<item value="페이"/>
+		<item value="반복"/>
+	</list>
+	<section name="java.lang.Class">
+		<item key="replaceBarOpen" value="true"/>
+		<list key="findhistory">
+			<item value="ajax"/>
+			<item value="first"/>
+			<item value="delete"/>
+			<item value="&lt;form"/>
+			<item value="modi"/>
+			<item value="삭제"/>
+			<item value="deleteBtn"/>
+			<item value="action"/>
+			<item value="&lt;input type=&quot;submit&quot;"/>
+			<item value="&lt;input type=&quot;submit&quot; value=&quot;저장하기&quot; class=&quot;btn btn-primary my-2&quot;&gt;"/>
+			<item value="form"/>
+			<item value="/create"/>
+			<item value="faq"/>
+			<item value="수정"/>
+			<item value="목록"/>
+		</list>
+	</section>
+</section>

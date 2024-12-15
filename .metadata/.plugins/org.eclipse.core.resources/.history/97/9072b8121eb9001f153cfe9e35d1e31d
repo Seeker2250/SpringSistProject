@@ -1,0 +1,8 @@
+package org.sist.sistproject.online;
+
+public interface EduService {
+	public void write(String name, String email, String password, String contact, String phone, String title, String content);
+
+	public void create(String name, String email, String password, String contact, String phone, String title,
+			String content);
+}

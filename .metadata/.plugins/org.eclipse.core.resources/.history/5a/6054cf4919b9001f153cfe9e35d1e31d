@@ -1,0 +1,7 @@
+package org.sist.sistproject.online;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OnlineRepository extends JpaRepository<Edu, Long>{
+
+}

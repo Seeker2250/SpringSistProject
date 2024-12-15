@@ -1,0 +1,12 @@
+package org.sist.sistproject.online;
+
+import org.springframework.data.domain.Page;
+
+public interface EduService {
+	public void write(String name, String email, String password, String contact, String phone, String title, String content);
+	public Page<Edu> getList(int page, String type, String kw);
+	public Edu getPreviousEdu(Long id);//이전 글
+	public Edu getNextEdu(Long id)ㅣ//다음 글
+	public Edu getEdu(Long id);//상세보기
+	public void modifyEdu(Edu edu, String title, String content);//수정
+}

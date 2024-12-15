@@ -1,0 +1,66 @@
+package org.sist.sistproject.online;
+
+import org.sist.sistproject.faq.FaqForm;
+import org.sist.sistproject.faq.FaqService;
+import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import jakarta.validation.Valid;
+import lombok.RequiredArgsConstructor;
+
+@Controller
+@RequestMapping("/online")
+@RequiredArgsConstructor//final로 자동 주입 마치 autowired
+public class EduController {
+	
+	private final EduService eduService;
+	
+	@GetMapping("/create")//회원이
+	public String create() {
+		return "/online/online_consultation";
+	}
+	
+	
+	@PostMapping("/create")//회원이
+	public String create(@Valid EduForm eduForm, BindingResult bindingResult) {
+		//, Principal principal
+		int authorid = 0;
+		
+		/*if( authorid > 0) {
+			
+		}else {
+			
+		}*/
+		
+		System.out.println("@@@@@@@@@@@EduController post로 create method  들어옴~");
+		
+		if (bindingResult.hasErrors()) {
+			System.out.println("@@@@@@@@@@@create 하다가 binding 에러남");
+			return "/online/eduCreate";
+		}
+		String title = eduForm.get
+		String content = eduForm.getContent();
+		//Member member = this.memberService.getMember(principal.getName());
+		String name ="test유저";
+		String email ="testManager@gmail.com";
+		this.eduService.register(title, content, name, email);
+		//this.faqService.register(title, content, member);
+		
+		return "redirect:/online/edu_list";
+	}
+	
+	
+	@GetMapping("/list")//관리자가
+	public String list() {
+		return "/online/edu_list";
+	}
+	
+	
+	@GetMapping("/detail")//관리자가
+	public String showDetail() {
+		return "/online/edu_detail";
+	}
+}

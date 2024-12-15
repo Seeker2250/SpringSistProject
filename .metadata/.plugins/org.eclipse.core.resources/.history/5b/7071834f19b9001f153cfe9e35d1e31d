@@ -1,0 +1,5 @@
+package org.sist.sistproject.online;
+
+public class OnlineServiceImpl implements EduService{
+
+}

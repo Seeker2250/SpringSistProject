@@ -1,0 +1,20 @@
+package org.sist.sistproject.online;
+
+import java.time.LocalDateTime;
+
+import org.sist.sistproject.faq.Faq;
+
+public class EduServiceImpl implements EduService{
+
+	@Override
+	public void register(String name, String email, String password, String contact, String phone, String title, String content) {
+		Faq faq = new Faq();
+		faq.setTitle(title);
+		faq.setContent(content);
+		faq.setCreateDate(LocalDateTime.now());
+		faq.setAuthor(name);
+		faq.setEmail(email);
+		this.faqRepository.save(faq);
+		
+	}
+}
